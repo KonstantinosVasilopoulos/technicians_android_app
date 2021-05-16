@@ -1,0 +1,135 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: User</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">gr.aueb.team14.domain</a> ]
+</div>
+
+<h1>Coverage Summary for Class: User (gr.aueb.team14.domain)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">User</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    85.7%
+  </span>
+  <span class="absValue">
+    (6/ 7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    76.2%
+  </span>
+  <span class="absValue">
+    (16/ 21)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package gr.aueb.team14.domain;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import java.math.BigInteger;
+<i>4</i>&nbsp;import java.security.MessageDigest;
+<i>5</i>&nbsp;import java.security.NoSuchAlgorithmException;
+<i>6</i>&nbsp;
+<i>7</i>&nbsp;public class User {
+<i>8</i>&nbsp;    private String username;
+<i>9</i>&nbsp;    private String password;
+<i>10</i>&nbsp;
+<b class="fc"><i>11</i>&nbsp;    public User(String username, String password) {</b>
+<b class="fc"><i>12</i>&nbsp;        this.username = username;</b>
+<b class="fc"><i>13</i>&nbsp;        setPassword(password);</b>
+<b class="fc"><i>14</i>&nbsp;    }</b>
+<i>15</i>&nbsp;
+<i>16</i>&nbsp;    public String getUsername() {
+<b class="fc"><i>17</i>&nbsp;        return username;</b>
+<i>18</i>&nbsp;    }
+<i>19</i>&nbsp;
+<i>20</i>&nbsp;    public void setUsername(String username) {
+<b class="nc"><i>21</i>&nbsp;        this.username = username;</b>
+<b class="nc"><i>22</i>&nbsp;    }</b>
+<i>23</i>&nbsp;
+<i>24</i>&nbsp;    public String getPassword() {
+<b class="fc"><i>25</i>&nbsp;        return password;</b>
+<i>26</i>&nbsp;    }
+<i>27</i>&nbsp;
+<i>28</i>&nbsp;    public void setPassword(String password) {
+<b class="fc"><i>29</i>&nbsp;        this.password = getSHA1Hash(password);</b>
+<b class="fc"><i>30</i>&nbsp;    }</b>
+<i>31</i>&nbsp;
+<i>32</i>&nbsp;    private String getSHA1Hash(String text) {
+<b class="fc"><i>33</i>&nbsp;        String hashedText = &quot;&quot;;</b>
+<i>34</i>&nbsp;        try {
+<b class="fc"><i>35</i>&nbsp;            MessageDigest md = MessageDigest.getInstance(&quot;SHA-1&quot;);</b>
+<b class="fc"><i>36</i>&nbsp;            byte[] textDigest = md.digest(text.getBytes());</b>
+<b class="fc"><i>37</i>&nbsp;            BigInteger no = new BigInteger(1, textDigest);</b>
+<b class="fc"><i>38</i>&nbsp;            hashedText = no.toString(16);</b>
+<i>39</i>&nbsp;
+<b class="nc"><i>40</i>&nbsp;        } catch (NoSuchAlgorithmException e) {</b>
+<b class="nc"><i>41</i>&nbsp;            e.printStackTrace();</b>
+<b class="nc"><i>42</i>&nbsp;            System.exit(-1);</b>
+<b class="fc"><i>43</i>&nbsp;        }</b>
+<i>44</i>&nbsp;
+<b class="fc"><i>45</i>&nbsp;        return hashedText;</b>
+<i>46</i>&nbsp;    }
+<i>47</i>&nbsp;
+<i>48</i>&nbsp;    // Checks whether the two given passwords match
+<i>49</i>&nbsp;    public static boolean checkPasswords(String password1, String password2) {
+<b class="fc"><i>50</i>&nbsp;        return password1.equals(password2);</b>
+<i>51</i>&nbsp;    }
+<i>52</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2021-05-16 23:12</div>
+</div>
+</body>
+</html>

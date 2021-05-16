@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>460</x>
+      <y>310</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;entity&gt;&gt;
+Customer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>620</x>
+      <y>170</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;boundary&gt;&gt;
+TechnicianUI</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>460</x>
+      <y>170</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;boundary&gt;&gt;
+CustomerUI</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>620</x>
+      <y>310</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;entity&gt;&gt;
+Technician</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>780</x>
+      <y>310</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;entity&gt;&gt;
+Appointment</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>770</x>
+      <y>240</y>
+      <w>160</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;controller&gt;&gt;
+AppointmentController</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
