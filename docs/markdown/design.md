@@ -1,5 +1,15 @@
 # Περιγραφή κλάσεων του συστήματος
 
+## User
+
+### Περιγραφή κλάσης
+
+Το interface *User* αποτελεί το αρχέτυπο για τον *Customer* και τον *Technician*. Μέσω της *User* υλοποιούνται οι λειτουργίες ασφαλής αποθήκευσης κωδικών με χρήση του αλγορίθμου SHA-1 και η εγγύηση πως οι δωσμένοι κωδικοί κατά την εγγραφή ενός χρήστη ταιριάζουν
+
+### Διάγραμμα κλάσης
+
+![Διάγραμμα κλάσης User](uml/class_diagrams/user_class_diagram.png)
+
 ## Appointment
 
 ### Περιγραφή κλάσης
@@ -16,6 +26,10 @@ public Appointment(Date from, Date to,double amount) {
     this.jobs = new ArrayList<>();
 }
 ```
+
+### Διάγραμμα κλάσης
+
+![Διάγραμμα κλάσης Appointment](uml/class_diagrams/appointment_class_diagram.png)
 
 ### Υλοποίηση των συσχετίσεων
 
@@ -64,11 +78,19 @@ public void removeJob(Job job) {
 
 Η κλάση *AvailableDate* συμβολίζει μία ημερομηνία στην οποία ο *Technician* είναι διαθέσιμος. Η μεταβλητή booked της κλάσης δηλώνει εάν ο *τεχνικός* έχει ραντεβού σε αυτή την ημερομηνία.
 
+### Διάγραμμα κλάσης
+
+![Διάγραμμα κλάσης AvailableDate](uml/class_diagrams/available_date_class_diagram.png)
+
 ## Customer
 
 ### Περιγραφή κλάσης
 
 H *Customer* αναπαριστά έναν *πελάτη* της εφαρμογής και επεκτείνει την κλάση *User*. Αναγνωριστικό ενός *πελάτη* αποτελεί το email του, το οποίο αποθηκεύεται στην κλάση *Customer*.
+
+### Διάγραμμα κλάσης
+
+![Διάγραμμα κλάσης Customer](uml/class_diagrams/customer_class_diagram.png)
 
 ### Υλοποίηση των συσχετίσεων
 
@@ -101,6 +123,10 @@ public void removeAppointment(Appointment appointment) {
 ### Περιγραφή κλάσης
 
 Η κλάση *Job* υλοποιεί τις διαθέσιμες δουλειές που μπορεί να εκτελέσει ένας *τενικός*. Κάθε δουλειά χρειάζεται ένα όνομα(πχ "Wall painting" ή "Pipe changing") και μία τιμή.
+
+### Διάγραμμα κλάσης
+
+![Διάγραμμα κλάσης Job](uml/class_diagrams/job_class_diagram.png)
 
 ### Υλοποίηση των συσχετίσεων
 
@@ -138,6 +164,10 @@ public void removeAppointment(Appointment appointment) {
 
 Η κλάση *Payment* συμβολίζει μία πληρωμή ενός *πελάτη* για ένα *ραντεβού*.
 
+### Διάγραμμα κλάσης
+
+![Διάγραμμα κλάσης Payment](uml/class_diagrams/payment_class_diagram.png)
+
 ### Υλοποίηση των συσχετίσεων
 
 #### Appointment
@@ -159,6 +189,10 @@ public void setAppointment(Appointment appointment) {
 ### Περιγραφή κλάσης
 
 Ένα *τεχνικός* αναπαριστάται από την κλάση *Technician*. Τα στοιχεία επικοινωνίας του *τεχνικού* δίνονται από τις μεταβλητές `communicationType` και `communicationValue`. Η πρώτη μεταβλητή αποθηκεύει τον τύπο επικοινωνίας που έχει επιλέξει ο *τεχνικός*(Email, SMS ή Phone) και η δεύτερη την τιμή του τύπου επικοινωνίας(πχ test@example.com).
+
+### Διάγραμμα κλάσης
+
+![Διάγραμμα κλάσης Technician](uml/class_diagrams/technician_class_diagram.png)
 
 ### Υλοποίηση των συσχετίσεων
 

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>250</x>
+      <y>160</y>
+      <w>410</w>
+      <h>390</h>
+    </coordinates>
+    <panel_attributes>*Customer*
+--
+- email: String
+- address: String
+- appointments: List&lt;Appointment&gt;
+--
++ constructor(address:String , email:String)
++ getters
++ setters
++ addAppointment(appointment: Appointment): void
++ removeAppointment(appointment: Appointment): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

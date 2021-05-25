@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>210</y>
+      <w>350</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>*Appointment*
+--
+- from: Date
+- to: Date
+- confirmed: Boolean
+- completed: Boolean
+- reviewScore: Integer
+- payment: Payment
+- customer: Customer
+- jobs: List&lt;Jobs&gt;
+--
++ constructor(from: Date, to: Date, amount: Double)
++ getters &amp; setters
++ addJob(job: Job): void
++ removeJob(job: Job): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
