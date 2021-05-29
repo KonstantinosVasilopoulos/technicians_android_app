@@ -5,16 +5,38 @@ import java.util.ArrayList;
 
 public class Customer extends User{
     private String email;
+    private String phone;
     private String address;
     private int tk;
     private List<Appointment> appointments;
 
-    public Customer(String username, String password, String address, int tk, String email) {
+    public Customer(String username, String password, String phone, String address, int tk, String email) {
         super(username, password);
+        this.phone = phone;
         this.address = address;
         this.tk = tk;
         this.email = email;
         this.appointments = new ArrayList<>();
+    }
+
+    public static boolean checkRegistrationValues(String username, String password, String phone,
+                                           String address, String tk, String email) {
+        try {
+            Integer.parseInt(tk);
+        } catch (NumberFormatException e) {
+            return false;
+        }
+
+        return !(username.equals("") || password.equals("") || phone.equals("") || address.equals("")
+                || tk.equals("") || email.equals(""));
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getAddress() {

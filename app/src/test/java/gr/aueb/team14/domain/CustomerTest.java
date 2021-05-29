@@ -13,7 +13,7 @@ class CustomerTest {
     @BeforeEach
     void setUp() {
         customer = new Customer("testName", "testing321",
-                "St. john's 13", 12345, "test@example.com");
+                "6912345678", "St. john's 13", 12345, "test@example.com");
     }
 
     @Test

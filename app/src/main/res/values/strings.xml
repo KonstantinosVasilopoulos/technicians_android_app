@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">team14</string>
+    <string name="title_activity_customer_registration">CustomerRegistration</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="customer_registration_header">Εγγραφή</string>
+    <string name="username_label">Ονοματεπώνυμο</string>
+    <string name="email_label">Email</string>
+    <string name="email_field_hint">πχ test@example.com</string>
+    <string name="phone_label">Τηλέφωνο</string>
+    <string name="phone_field_hint">πχ 2101234567</string>
+    <string name="address_label">Διεύθυνση</string>
+    <string name="tk_label">Ταχυδρομικός Κωδικός</string>
+    <string name="password1_label">Κωδικός</string>
+    <string name="password1_field_hint">τουλάχιστον 8 χαρακτήρες σε μέγεθος</string>
+    <string name="password2_label">Επαλήθευση Κωδικού</string>
+    <string name="customer_registration_button_text">ΕΓΓΡΑΦΗ</string>
+    <string name="password_length_error">Ο κωδικός είναι πολύ μικρός!</string>
+    <string name="passwords_do_not_match_error">Οι κωδικοί δεν ταιριάζουν!</string>
+    <string name="wrong_values_given_error">Έχουν δωθεί λάθος τιμές!</string>
 </resources>
