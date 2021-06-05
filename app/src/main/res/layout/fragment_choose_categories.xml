@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ChooseCategoriesView"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    tools:context=".ui.ChooseCategoriesFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ChooseCategoriesLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_categories_label"
+            android:textSize="20sp" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/CategoriesScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="false">
+
+            <LinearLayout
+                android:id="@+id/CategoriesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/electricianBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/electrician"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/plumberBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/plumber"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/gardenerBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/gardener"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/locksmithBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/locksmith"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/plakatzisBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/plakatzis"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/plastererBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/plasterer"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/engineerBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/engineer"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/builderBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/builder"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/carpenterBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/carpenter"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+</FrameLayout>

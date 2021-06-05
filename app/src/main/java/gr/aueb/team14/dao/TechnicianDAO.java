@@ -6,7 +6,7 @@ import java.util.List;
 import gr.aueb.team14.domain.Technician;
 
 public class TechnicianDAO {
-    private TechnicianDAO instance = null;
+    private static TechnicianDAO instance = null;
 
     private List<Technician> technicians;
 
@@ -14,7 +14,7 @@ public class TechnicianDAO {
         technicians = new ArrayList<>();
     }
 
-    public TechnicianDAO getInstance() {
+    public static TechnicianDAO getInstance() {
         if (instance == null)
             instance = new TechnicianDAO();
 

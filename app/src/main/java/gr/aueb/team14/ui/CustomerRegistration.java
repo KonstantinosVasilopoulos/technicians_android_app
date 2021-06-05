@@ -20,6 +20,11 @@ public class CustomerRegistration extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_registration);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
 
         // Add listener to button responsible for handling customer registration
         Button customerRegistrationButton = (Button) findViewById(R.id.customerRegistrationButton);

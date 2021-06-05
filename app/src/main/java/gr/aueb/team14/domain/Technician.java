@@ -66,12 +66,16 @@ public class Technician extends User{
             specialties.add(specialty);
     }
 
-    public void removeSpecialty(List<Specialty> special) {
+    public void removeSpecialty(Specialty special) {
         specialties.remove(special);
     }
 
     public List<AvailableDate> getAvailableDates() {
         return availableDates;
+    }
+
+    public void setAvailableDates(List<AvailableDate> availableDates) {
+        this.availableDates = availableDates;
     }
 
     public void addAvailableDate(AvailableDate date){
@@ -89,6 +93,10 @@ public class Technician extends User{
 
     public List<Job> getJobs() {
         return jobs;
+    }
+
+    public void setJobs(List<Job> jobs) {
+        this.jobs = jobs;
     }
 
     public void addJob(Job job) {

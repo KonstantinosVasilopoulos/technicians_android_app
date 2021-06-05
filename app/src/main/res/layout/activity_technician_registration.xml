@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.TechnicianRegistration">
+
+    <ScrollView
+        android:id="@+id/technicianregistrationView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/technicianView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/chooseCategoriesFragment"
+                android:name="gr.aueb.team14.ui.ChooseCategoriesFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp" />
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/addressesView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="10dp"
+                android:fillViewport="false">
+
+                <LinearLayout
+                    android:id="@+id/addressLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/addressesLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/choose_addresses_label"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/addAddressBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/add_address_btn" />
+                    </LinearLayout>
+
+                    <androidx.fragment.app.FragmentContainerView
+                        android:id="@+id/addressFragment0"
+                        android:name="gr.aueb.team14.ui.AddressesFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:tag="addressFragment0" />
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/availableDatevIew"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="10dp"
+                android:fillViewport="false">
+
+                <LinearLayout
+                    android:id="@+id/availableDateLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/datesLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/choose_dates_label"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/addDateBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/add_date_btn"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <androidx.fragment.app.FragmentContainerView
+                        android:id="@+id/dateFragment0"
+                        android:name="gr.aueb.team14.ui.AvailableDateFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:tag="dateFragment0" />
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/communicationTypeFragment"
+                android:name="gr.aueb.team14.ui.CommunicationTypeFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/jobsView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="10dp"
+                android:fillViewport="false">
+
+                <LinearLayout
+                    android:id="@+id/jobsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/jobsLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/choose_jobs_label"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/addJobBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/add_job_btn" />
+                    </LinearLayout>
+
+                    <androidx.fragment.app.FragmentContainerView
+                        android:id="@+id/jobFragment0"
+                        android:name="gr.aueb.team14.ui.JobsFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:tag="jobFragment0" />
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <LinearLayout
+                android:id="@+id/restTechnicianData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/restTechnisianDataLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rest_technician_data_label"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray" />
+
+                <LinearLayout
+                    android:id="@+id/usernameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/usernameLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/username_label"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/usernameField"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="textPersonName" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/passwordLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/password1Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/password1_label"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/password1Field"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="textPassword" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/password2Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/password2Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/password2_label" />
+
+                    <EditText
+                        android:id="@+id/password2Field"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="textPassword" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/technicianRegistrationBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/customer_registration_header" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
