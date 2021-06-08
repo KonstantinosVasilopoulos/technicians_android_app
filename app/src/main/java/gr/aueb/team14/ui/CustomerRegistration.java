@@ -2,6 +2,7 @@ package gr.aueb.team14.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -49,7 +50,9 @@ public class CustomerRegistration extends AppCompatActivity {
                             Customer customer = new Customer(username, password1, phone, address, Integer.parseInt(tk), email);
                             CustomerDAO.getInstance().save(customer);
 
-                            // TODO: Redirect to another activity
+                            // Redirect to the activity listing all technicians
+                            Intent intent = new Intent(v.getContext(), TechnicianList.class);
+                            v.getContext().startActivity(intent);
 
                         } else {
                             // Display value error popup

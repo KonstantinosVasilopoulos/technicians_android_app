@@ -22,9 +22,9 @@ public class CustomerDAO {
         return instance;
     }
 
-    public Customer find(String email) {
+    public Customer find(String username) {
         for (Customer customer : customers) {
-            if (email.equals(customer.getUsername()))
+            if (username.equals(customer.getUsername()))
                 return customer;
         }
         return null;

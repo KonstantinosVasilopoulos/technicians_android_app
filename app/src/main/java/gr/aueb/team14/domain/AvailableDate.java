@@ -1,5 +1,11 @@
 package gr.aueb.team14.domain;
 
+import android.annotation.SuppressLint;
+
+import org.jetbrains.annotations.NotNull;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class AvailableDate{
@@ -44,5 +50,12 @@ public class AvailableDate{
 
     public void setTechnician(Technician technician) {
         this.technician = technician;
+    }
+
+    @NotNull
+    public String toString() {
+        @SuppressLint("SimpleDateFormat")
+        DateFormat dateFormat = new SimpleDateFormat("dd MMMM yy");
+        return dateFormat.format(from) + " μέχρι " + dateFormat.format(to);
     }
 }

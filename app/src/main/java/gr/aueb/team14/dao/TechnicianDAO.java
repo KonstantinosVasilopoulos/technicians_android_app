@@ -38,4 +38,15 @@ public class TechnicianDAO {
     public void delete(Technician technician) {
         technicians.remove(technician);
     }
+
+    // Returns 20 technicians
+    public List<Technician> getSomeTechnicians() {
+        List<Technician> someTechnicians = new ArrayList<>();
+        for (int i = 0; i < 20; i ++) {
+            if (i < technicians.size())
+                someTechnicians.add(technicians.get(i));
+        }
+
+        return someTechnicians;
+    }
 }

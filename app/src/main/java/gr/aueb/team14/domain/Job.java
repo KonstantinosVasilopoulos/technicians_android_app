@@ -1,5 +1,7 @@
 package gr.aueb.team14.domain;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -55,5 +57,10 @@ public class Job{
             appointments.remove(appointment);
             appointment.removeJob(this);
         }
+    }
+
+    @NotNull
+    public String toString() {
+        return name + " " + price + "€";
     }
 }

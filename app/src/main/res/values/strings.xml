@@ -58,4 +58,15 @@
     <string name="login_btn">ΣΥΝΔΕΣΗ</string>
     <string name="register_customer_btn">ΕΓΓΡΑΦΗ ΧΡΗΣΤΗ</string>
     <string name="register_technician_btn">ΕΓΓΡΑΦΗ ΤΕΧΝΙΚΟΥ</string>
+    <string name="login_label">ΣΥΝΔΕΣΗ</string>
+    <string name="login_error">Λάθος όνομα χρήστη ή κωδικός</string>
+    <string name="search_btn">Αναζητηση</string>
+    <string name="search_box_hint">Όνομα τεχνικού</string>
+    <string name="back_btn">ΠΙΣΩ</string>
+    <string name="specialties_section_title">Ειδικότητες</string>
+    <string name="choose_date_title">Επιλέξτε ημερομηνία</string>
+    <string name="show_info_btn">ΚΡΑΤΗΣΗ</string>
+    <string name="no_job_chosen_error">Επιλέξτε τουλάχιστον μία δουλειά</string>
+    <string name="no_chosen_date_error">Επιλέξτε κάποια ημερομηνία</string>
+    <string name="appointment_created">Κλείσατε νέο ραντεβού!</string>
 </resources>

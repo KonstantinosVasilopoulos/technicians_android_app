@@ -29,7 +29,7 @@ public class User {
         this.password = getSHA1Hash(password);
     }
 
-    private String getSHA1Hash(String text) {
+    public static String getSHA1Hash(String text) {
         String hashedText = "";
         try {
             MessageDigest md = MessageDigest.getInstance("SHA-1");
