@@ -1,10 +1,17 @@
 package gr.aueb.team14.domain;
 
+import android.annotation.SuppressLint;
+
+import org.jetbrains.annotations.NotNull;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Appointment{
+public class Appointment {
+    private long id;
     private Date from;
     private Date to;
     private boolean confirmed;
@@ -14,13 +21,20 @@ public class Appointment{
     private Customer customer;
     private List<Job> jobs;
 
+    private static int idCounter = 0;
+
     public Appointment(Date from, Date to,double amount) {
+        this.id = idCounter++;
         this.from = from;
         this.to = to;
         this.completed = false;
         this.confirmed = false;
         setPayment(new Payment(amount));
         this.jobs = new ArrayList<>();
+    }
+
+    public long getId() {
+        return id;
     }
 
     public Appointment(boolean confirmed) {
@@ -98,5 +112,12 @@ public class Appointment{
             jobs.remove(job);
             job.removeAppointment(this);
         }
+    }
+
+    @NotNull
+    public String toString() {
+        @SuppressLint("SimpleDateFormat")
+        DateFormat dateFormat = new SimpleDateFormat("dd MMMM yyyy");
+        return dateFormat.format(from) + " - " + dateFormat.format(to) + " " + customer.getAddress();
     }
 }

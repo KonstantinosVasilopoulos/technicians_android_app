@@ -21,6 +21,15 @@ public class AppointmentDAO {
         return instance;
     }
 
+    public Appointment find(long id) {
+        for (Appointment appointment : appointments) {
+            if (appointment.getId() == id)
+                return appointment;
+        }
+
+        return null;
+    }
+
     public List<Appointment> getAppointmentsForTechnician(String username) {
         List<Appointment> technicianAppointments = new ArrayList<>();
         for (Appointment appointment : appointments) {

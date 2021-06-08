@@ -69,4 +69,7 @@
     <string name="no_job_chosen_error">Επιλέξτε τουλάχιστον μία δουλειά</string>
     <string name="no_chosen_date_error">Επιλέξτε κάποια ημερομηνία</string>
     <string name="appointment_created">Κλείσατε νέο ραντεβού!</string>
+    <string name="pending_appointments_label">Νέα ραντεβού</string>
+    <string name="confirm_btn">ΕΠΙΒΕΒΑΙΩΣΗ</string>
+    <string name="dismiss_btn">ΑΠΟΡΡΙΨΗ</string>
 </resources>

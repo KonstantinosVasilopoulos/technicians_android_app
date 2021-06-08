@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Team14">
-        <activity android:name=".ui.BookReservationActivity"></activity>
+        <activity android:name=".ui.AppointmentsActivity"></activity>
+        <activity android:name=".ui.BookReservationActivity" />
         <activity android:name=".ui.TechnicianList" />
         <activity android:name=".ui.LoginActivity" />
         <activity android:name=".ui.MainActivity">

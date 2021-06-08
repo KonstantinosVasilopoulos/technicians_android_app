@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import gr.aueb.team14.R
+import gr.aueb.team14.dao.AppointmentDAO
 import gr.aueb.team14.dao.CustomerDAO
 import gr.aueb.team14.dao.TechnicianDAO
 import gr.aueb.team14.domain.*
@@ -38,6 +39,10 @@ class MainActivity : AppCompatActivity() {
         CustomerDAO.getInstance().save(customer)
         customer = Customer("Mark", "testing321", "2107654321", "Address St. 11", 12346, "mark@example.gr")
         CustomerDAO.getInstance().save(customer)
+        val appointment = Appointment(technician.availableDates.get(0).from, technician.availableDates.get(0).to, technician.jobs[0].price)
+        appointment.addJob(technician.jobs[0])
+        customer.addAppointment(appointment)
+        AppointmentDAO.getInstance().save(appointment)
     }
 
     override fun onStart() {

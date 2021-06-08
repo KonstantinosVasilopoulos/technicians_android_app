@@ -80,4 +80,12 @@ public class Customer extends User{
             appointment.setCustomer(null);
         }
     }
+
+    public void sendConfirmationEmail(Appointment appointment) {
+
+    }
+
+    public void sendDismissalEmail(Appointment appointment) {
+
+    }
 }

@@ -48,7 +48,9 @@ public class LoginActivity extends AppCompatActivity {
                         Intent intent = new Intent(LoginActivity.this, TechnicianList.class);
                         startActivity(intent);
                     } else {
-                        // TODO: Redirect the use to his reservations
+                        // Redirect the use to his appointments
+                        Intent intent = new Intent(v.getContext(), AppointmentsActivity.class);
+                        v.getContext().startActivity(intent);
                     }
                 } else {
                     // Show error popup
