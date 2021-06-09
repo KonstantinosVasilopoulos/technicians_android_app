@@ -72,4 +72,7 @@
     <string name="pending_appointments_label">Νέα ραντεβού</string>
     <string name="confirm_btn">ΕΠΙΒΕΒΑΙΩΣΗ</string>
     <string name="dismiss_btn">ΑΠΟΡΡΙΨΗ</string>
+    <string name="uncompleted_appointments_label">Μη ολοκληρωμένα ραντεβού</string>
+    <string name="complete_appointment_btn">ΟΛΟΚΛΗΡΩΣΗ</string>
+    <string name="appointment_completed">Το ραντεβού ολοκληρώθηκε</string>
 </resources>

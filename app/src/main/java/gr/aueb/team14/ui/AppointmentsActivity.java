@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.LinearLayout;
 
 import gr.aueb.team14.LoggedInUser;
@@ -29,6 +30,7 @@ public class AppointmentsActivity extends AppCompatActivity {
 
         // Setup the appointments
         mPendingAppointmentsSection = findViewById(R.id.pendingAppointmentsSection);
+        if (mTechnician == null) return;
         for (Appointment appointment : AppointmentDAO.getInstance().getAppointmentsForTechnician(mTechnician.getUsername())) {
             // Pending appointments
             if (!appointment.isConfirmed()) {
@@ -39,6 +41,16 @@ public class AppointmentsActivity extends AppCompatActivity {
                 newFragment.setArguments(args);
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.add(R.id.pendingAppointmentsSection, newFragment, "appointmentApprovalEntry");
+                ft.commit();
+
+            } else if (!appointment.isCompleted()) {
+                // Create an entry for an uncompleted appointment
+                Fragment newFragment = new AppointmentCompletionFragment();
+                Bundle args = new Bundle();
+                args.putLong("APPOINTMENT_ID", appointment.getId());
+                newFragment.setArguments(args);
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.add(R.id.uncompletedAppointmentsSection, newFragment, "appointmentCompletionEntry");
                 ft.commit();
             }
         }

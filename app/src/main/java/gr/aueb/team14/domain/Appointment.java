@@ -46,7 +46,8 @@ public class Appointment {
     }
 
     public void setCompleted(boolean completed) {
-        this.completed = completed;
+        if (!this.completed)
+            this.completed = completed;
     }
 
     public boolean isConfirmed() {
