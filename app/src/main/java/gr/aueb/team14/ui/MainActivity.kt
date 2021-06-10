@@ -39,12 +39,19 @@ class MainActivity : AppCompatActivity() {
         CustomerDAO.getInstance().save(customer)
         customer = Customer("Mark", "testing321", "2107654321", "Address St. 11", 12346, "mark@example.gr")
         CustomerDAO.getInstance().save(customer)
-        val appointment = Appointment(technician.availableDates.get(0).from, technician.availableDates.get(0).to, technician.jobs[0].price)
+        val appointment = Appointment(technician.availableDates[0].from, technician.availableDates[0].to, technician.jobs[0].price + technician.jobs[2].price)
         appointment.addJob(technician.jobs[0])
         appointment.addJob(technician.jobs[2])
         appointment.isConfirmed = true
         customer.addAppointment(appointment)
         AppointmentDAO.getInstance().save(appointment)
+        val appointment2 = Appointment(technician.availableDates[0].from, technician.availableDates[0].to, technician.jobs[0].price)
+        appointment2.addJob(technician.jobs[0])
+        appointment2.isConfirmed = true
+        appointment2.isCompleted = true
+        appointment2.payment.isCompleted = true
+        customer.addAppointment(appointment2)
+        AppointmentDAO.getInstance().save(appointment2)
     }
 
     override fun onStart() {

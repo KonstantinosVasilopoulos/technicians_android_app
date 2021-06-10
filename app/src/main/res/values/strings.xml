@@ -81,4 +81,8 @@
     <string name="payment_btn">ΠΛΗΡΩΜΗ</string>
     <string name="payment_job_price">%1$d €</string>
     <string name="add_appointment_btn">ΝΕΟ ΡΑΝΤΕΒΟΥ</string>
+    <string name="evaluation_btn">ΑΞΙΟΛΟΓΗΣΗ</string>
+    <string name="evaluation_label">Αξιολόγηση ραντεβού</string>
+    <string name="appointment_evaluation_label">Αξιολογήστε τον τεχνικό</string>
+    <string name="appointment_evaluation_hint">0: Κακές υπηρεσίες   10: Άψογες υπηρεσίες</string>
 </resources>

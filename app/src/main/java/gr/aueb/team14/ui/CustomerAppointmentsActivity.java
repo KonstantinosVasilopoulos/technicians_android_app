@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -21,6 +22,7 @@ import gr.aueb.team14.domain.Customer;
 public class CustomerAppointmentsActivity extends AppCompatActivity {
     LinearLayout mPendingAppointmentsLayout;
     LinearLayout mConfirmedAppointmentsLayout;
+    LinearLayout mEvaluationLayout;
     FragmentManager fm;
 
     @Override
@@ -30,6 +32,7 @@ public class CustomerAppointmentsActivity extends AppCompatActivity {
 
         mPendingAppointmentsLayout = findViewById(R.id.pendingAppointmentsLayout);
         mConfirmedAppointmentsLayout = findViewById(R.id.confirmedAppointmentsLayout);
+        mEvaluationLayout = findViewById(R.id.evaluationLayout);
         fm = getSupportFragmentManager();
 
         // Add entries for the appointments
@@ -49,6 +52,17 @@ public class CustomerAppointmentsActivity extends AppCompatActivity {
                 args.putLong("APPOINTMENT_ID", appointment.getId());
                 newFragment.setArguments(args);
                 ft.add(R.id.confirmedAppointmentsLayout, newFragment);
+                ft.commit();
+            }
+
+            // Show the user appointments that can be evaluated
+            if (appointment.isCompleted()) {
+                FragmentTransaction ft = fm.beginTransaction();
+                Fragment newFragment = new EvaluationEntryFragment();
+                Bundle args = new Bundle();
+                args.putLong("APPOINTMENT_ID", appointment.getId());
+                newFragment.setArguments(args);
+                ft.add(R.id.evaluationLayout, newFragment);
                 ft.commit();
             }
         }
