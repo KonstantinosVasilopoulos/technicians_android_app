@@ -41,6 +41,8 @@ class MainActivity : AppCompatActivity() {
         CustomerDAO.getInstance().save(customer)
         val appointment = Appointment(technician.availableDates.get(0).from, technician.availableDates.get(0).to, technician.jobs[0].price)
         appointment.addJob(technician.jobs[0])
+        appointment.addJob(technician.jobs[2])
+        appointment.isConfirmed = true
         customer.addAppointment(appointment)
         AppointmentDAO.getInstance().save(appointment)
     }

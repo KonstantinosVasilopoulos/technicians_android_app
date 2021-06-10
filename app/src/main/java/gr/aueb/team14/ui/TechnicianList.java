@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import java.util.List;
 
@@ -31,5 +34,15 @@ public class TechnicianList extends AppCompatActivity {
         technicianRecyclerView = (RecyclerView) findViewById(R.id.technicianRecycleView);
         technicianRecyclerView.setAdapter(technicianItemAdapter);
         technicianRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        // Add a listener to the button redirecting to the previous view
+        Button backBtn = findViewById(R.id.backBtn);
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), CustomerAppointmentsActivity.class);
+                v.getContext().startActivity(intent);
+            }
+        });
     }
 }

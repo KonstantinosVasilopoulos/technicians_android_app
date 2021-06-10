@@ -139,6 +139,10 @@ public class BookReservationActivity extends AppCompatActivity {
                 Snackbar.make(findViewById(R.id.bookReservationView),
                         R.string.appointment_created,
                         Snackbar.LENGTH_SHORT).show();
+
+                // Go back to the activity displaying all the appointments of the customer
+                Intent intent = new Intent(v.getContext(), CustomerAppointmentsActivity.class);
+                v.getContext().startActivity(intent);
             }
         });
     }

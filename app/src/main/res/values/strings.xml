@@ -75,4 +75,10 @@
     <string name="uncompleted_appointments_label">Μη ολοκληρωμένα ραντεβού</string>
     <string name="complete_appointment_btn">ΟΛΟΚΛΗΡΩΣΗ</string>
     <string name="appointment_completed">Το ραντεβού ολοκληρώθηκε</string>
+    <string name="for_payment_appointments_label">Ραντεβού προς πληρωμή</string>
+    <string name="amount_label">Ποσό</string>
+    <string name="payment_jobs_label">Δουλειές αναλυτικά</string>
+    <string name="payment_btn">ΠΛΗΡΩΜΗ</string>
+    <string name="payment_job_price">%1$d €</string>
+    <string name="add_appointment_btn">ΝΕΟ ΡΑΝΤΕΒΟΥ</string>
 </resources>

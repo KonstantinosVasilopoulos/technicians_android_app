@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -45,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (success) {
                     if (LoggedInUser.getInstance().getUser() instanceof Customer) {
                         // Send the user to the activity containing all technicians
-                        Intent intent = new Intent(LoginActivity.this, TechnicianList.class);
+                        Intent intent = new Intent(LoginActivity.this, CustomerAppointmentsActivity.class);
                         startActivity(intent);
                     } else {
                         // Redirect the use to his appointments
