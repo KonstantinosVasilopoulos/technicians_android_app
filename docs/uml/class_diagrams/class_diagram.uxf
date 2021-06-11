@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>4</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>420</y>
+      <w>140</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>*Appointment*
+--
+- from: Date
+- to: Date
+- confirmed: Boolean
+- completed: Boolean
+- reviewScore: Integer
+- payment: Payment
+- customer: Customer
+- jobs: List&lt;Jobs&gt;
+--
++ constructor(from: Date, to: Date, amount: Double)
++ getters &amp; setters
++ addJob(job: Job): void
++ removeJob(job: Job): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>696</x>
+      <y>420</y>
+      <w>100</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>*AvailableDate*
+--
+- from: Date
+- to: Date
+- booked: Boolean
+- technician: Technician
+--
++ constructor(from: Date, to: Date)
++ getters &amp; setters</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>44</x>
+      <y>408</y>
+      <w>164</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>*Customer*
+--
+- email: String
+- address: String
+- appointments: List&lt;Appointment&gt;
+--
++ constructor(address:String , email:String)
++ getters
++ setters
++ addAppointment(appointment: Appointment): void
++ removeAppointment(appointment: Appointment): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>368</x>
+      <y>600</y>
+      <w>148</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>*Job*
+--
+- name: String
+- price: Double
+- technician: Technician
+- appointments: List&lt;Appointment&gt;
+--
++ constructor(name: String, price: Double)
++ getters &amp; setters
++ addAppointment(appointment: Appointment): void
++ removeAppointment(appointment: Appointment): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>600</y>
+      <w>136</w>
+      <h>124</h>
+    </coordinates>
+    <panel_attributes>*Payment*
+--
+- amount: Double
+- performedAt: Date
+- completed: Boolean
+- appointment: Appointment
+--
++ constructor(amount: Double)
++ getters
++ setters</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>464</x>
+      <y>388</y>
+      <w>160</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>*Technician*
+--
+- email: String
+- address: String
+- appointments: List&lt;Appointment&gt;
+--
++ constructor(address:String , email: String)
++ getters
++ setters
++ addAppointment(appointment: Appointment): void
++ removeAppointment(appointment: Appointment): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>252</x>
+      <y>252</y>
+      <w>176</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>*User*
+{ Abstract }
+--
+- username: String
+- password: String
+--
++ constructor(username: String, password: String)
++ getters &amp; setters
+- getSHA1Hash(text: String): String
+_+ checkPasswords(password1: String, password2: String): Boolean_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>332</x>
+      <y>316</y>
+      <w>12</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>116</x>
+      <y>360</y>
+      <w>228</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0;550.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>332</x>
+      <y>360</y>
+      <w>224</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>540.0;70.0;540.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>204</x>
+      <y>420</y>
+      <w>84</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..n
+</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>284</x>
+      <y>512</y>
+      <w>16</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>408</x>
+      <y>512</y>
+      <w>20</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..n
+m2=1..n
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>476</x>
+      <y>544</y>
+      <w>20</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..n
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>620</x>
+      <y>432</y>
+      <w>84</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..n
+</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
+  </element>
+</diagram>

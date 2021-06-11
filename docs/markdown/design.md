@@ -1,5 +1,9 @@
 # Περιγραφή κλάσεων του συστήματος
 
+## Διάγραμμα κλάσεων της λογικής του πεδίου
+
+![Διάγραμμα κλάσεων](uml/class_diagrams/class_diagram.png)
+
 ## User
 
 ### Περιγραφή κλάσης
@@ -266,74 +270,44 @@ public void removeJob(Job job) {
 }
 ```
 
-# Υλοποίηση διαγραμμάτων από τις κλάσεις του μοντέλου πεδίου
+## Υλοποίηση των controllers του συστήματος μέ κλάσεις DAO
 
-Όλες οι περιπτώσεις χρήσης του συστήματος βασίζονται στo UI της εφαρμογής. Για αυτό το λόγο δεν είναι σε θέση να υλοποιηθούν τα διαγράμματα με ακρίβεια μέχρι και το βήμα R4. Παρόλα αυτά, φτιάξαμε παραδείγματα κώδικα για όλα τα διαγράμματα των σημαντικότερων περιπτώσεων χρήσης, έτσι ώστε να αποδείξουμε ότι οι κλάσεις που φτιάξαμε μπορούν να συνδυαστούν και να παράξουν τη λογική των διαγραμμάτων. Υποθέτουμε ότι ο χρήστης επικοινωνεί με την εφαρμογή μέσω μίας υποθετικής κλάσης εν ονόματι `UI`.
+### AppointmentDAO
+
+![Διάγραμμα κλάσης](uml/class_diagrams/appointmentdao_class_diagram.png)
+
+### CustomerDAO
+
+![Διάγραμμα κλάσης](uml/class_diagrams/customerdao_class_diagram.png)
+
+### TechnicianDAO
+
+![Διάγραμμα κλάσης](uml/class_diagrams/techniciandao_class_diagram.png)
+
+## Υλοποίηση διαγραμμάτων από τις κλάσεις του μοντέλου πεδίου
+
+### [ΠΧ 1 - Εγγραφή Πελάτη](uc1-client-registration.md)
+
+#### Διαγράμματα
+
+![Διάγραμμα δραστηριοτήτων](uml/requirements/uc1-activity-diagram.png)
+
+![Διάγραμμα ακολουθίας - Εγγραφή Πελάτη](uml/requirements/uc1-sequence-diagram.png)
 
 ### [ΠΧ 2 - Εγγραφή Τεχνικού](uc2-technician-registration.md)
 
-#### Διάγραμμα
+#### Διαγράμματα
 
 ![Διάγραμμα δραστηριοτήτων](uml/requirements/uc2-activity-diagram.png)
 
-#### Πιθανή υλοποίηση
+![Διάγραμμα ακολουθίας - Εγγραφή Τεχνικού](uml/requirements/uc2-sequence-diagram.png)
 
-```
-// Specialties
-List<Specialty> specialties = new ArrayList<>();
-do {
-    // User adds specialty builder via UI
-    specialties.add(UI.input());
-} while (specialties.size() == 0);
 
-// Addresses
-List<String> addresses = new ArrayList<>();
-do {
-    addresses.add(UI.input());
-} while (addresses.size() == 0);
+### ΠΧ 3 - Προβολή Τεχνικών
 
-// Rest of the data
-String username = UI.input();
-List<Job> jobs = UI.input();
-List<AvailableDate> availableDates= UI.input();
+#### Διάγραμμα
 
-// Communication info
-CommunicationType communicationType = UI.input();
-String communicationValue;
-switch (communicationType) {
-    case CommunicationType.Email:
-        communicationValue = UI.input();
-        UI.output("Sent email to " + communicationValue + ".");
-        break;
-
-    case CommunicationType.SMS:
-        communicationValue = UI.input();
-        break;
-
-    case CommunicationType.Phone:
-        communicationValue = UI.input();
-        break;
-}
-
-// Passwords
-String password1 = UI.input();
-String password2 = UI.input();
-while (!User.checkPasswords(password1, password2)) {
-    password1 = UI.input();
-    password2 = UI.input();
-}
-
-// Create technician
-Technician t = new Technician(username, password1);
-t.setSpecialties(specialties);
-t.setAddresses(addresses);
-for (Job job : jobs)
-    t.addJob(job);
-for (AvailableDate date : availableDates)
-    t.addAvailableDate(date);
-t.setCommunicationType(communicationType);
-t.setCommunicationValue(communicationValue);
-```
+![Διάγραμμα ακολουθίας - Προβολή τεχνικών](uml/requirements/uc3-sequence-diagram.png)
 
 ### [ΠΧ 4 - Επιλογή Ραντεβού](uc4-appointment-selection.md)
 
@@ -341,48 +315,9 @@ t.setCommunicationValue(communicationValue);
 
 ![Διάγραμμα δραστηριοτήτων](uml/requirements/uc4-activity-diagram.png)
 
-![Διάγραμμα ακολουθίας](uml/requirements/uc4-sequence-diagram.png)
+![Διάγραμμα ακολουθίας - Επιλογή Ραντεβού](uml/requirements/uc4-sequence-diagram.png)
 
-#### Πιθανή υλοποίηση
-
-```
-// User chooses technician and a job
-Technician technician = CustomerUI.getTechnician();
-Job job = CustomerUI.getJob();
-Date from = CustomerUI.getFromDate();
-Date to = CustomerUi.getToFate();
-
-// Choose date
-AvailableDate date;
-do {
-    date = UI.input();
-    if (date == null;)
-        System.exit(-1);
-} while (technician.getAvailableDates().get(date).isBooked());
-
-// A customer's email is his ID
-String id = customer.getEmail();
-
-// Notify the technician
-switch (technician.getCommunicationType()) {
-    case CommunicationType.Email:
-        UI.output("Sent email to technician for the new appointment.");
-        break;
-    
-    case CommunicationType.SMS || CommunicationType.Phone:
-        UI.output("Notified technician for new appointment.");
-        break;
-}
-
-// Create and save the new appointment
-Appointment appointment = new Appointment(from, to, job.getPrice());
-AppointmentController.save(appointment);
-
-// Connect the appointment to the technician
-appointment.addJob(job);
-```
-
-### [ΠΧ 5 - Επιβεβαίωση Ραντεβού](uc5-appointme-confirmation.md)
+### [ΠΧ 5 - Επιβεβαίωση Ραντεβού](uc5-appointment-confirmation.md)
 
 #### Διαγράμματα
 
@@ -390,20 +325,23 @@ appointment.addJob(job);
 
 ![Διάγραμμα ακολουθίας - Επιβεβαίωση Ραντεβού](uml/requirements/uc5-sequence-diagram.png)
 
-#### Πιθανή υλοποίηση
+### ΠΧ 6 - Ολοκλήρωση Ραντεβού
 
-```
-Appointment appointment = TechnicianUI.getAppointment();
+#### Διάγραμμα
 
-if (TechnicianUIa.confirmBtnClicked) {
-    appointment.setConfirmed(true);
-    UI.output("Appointment approved.");
-    UI.output("Notifying customer " + appointment.getCustomer().getUsername() + "for appointment confirmation...");
-} else if (TechnicianUI.dismissedbtnClicked) {
-    UI.output("Appointment dismissed.");
-    UI.output("Notifying customer " + appointment.getCustomer().getUsername() + "for appointment dismissal...");
-}
-```
+![Διάγραμμα ακολουθίας - Ολοκλήρωση Ραντεβού](uml/requirements/uc6-sequence-diagram.png)
+
+### ΠΧ 7 - Εξόφληση Τεχνικού
+
+#### Διάγραμμα
+
+![Διάγραμμα ακολουθίας - Εξόφληση Τεχνικού](uml/requirements/uc7-sequence-diagram.png)
+
+### ΠΧ 8 - Αξιολόγηση Τεχνικού
+
+#### Διάγραμμα
+
+![Διάγραμμα ακολουθίας - Αξιολόγηση Τεχνικού](uml/requirements/uc8-sequence-diagram.png)
 
 ### Code coverage
 

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>290</y>
+      <w>460</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>*TechnicianDAO*
+--
+_- instance: TechnicianDAO_
+- technicians: List&lt;Technician&gt;
+--
+_+ getInstance(): TechnicianDAO_
++ find(id: long): Technician
++ save(technician: Technician): void
++ delete(technician: Technician): void
++ getSomeTechnicians(): List&lt;Technician&gt; 
+  </panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

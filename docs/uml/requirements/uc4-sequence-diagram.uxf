@@ -4,30 +4,30 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>530</x>
-      <y>170</y>
+      <x>650</x>
+      <y>190</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
-    <panel_attributes>_:Customer_</panel_attributes>
+    <panel_attributes>_:Appointment_</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>760</x>
-      <y>170</y>
-      <w>100</w>
+      <x>810</x>
+      <y>190</y>
+      <w>120</w>
       <h>30</h>
     </coordinates>
-    <panel_attributes>_:Technician_</panel_attributes>
+    <panel_attributes>_:TechnicianDAO_</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>220</x>
-      <y>100</y>
+      <x>280</x>
+      <y>120</y>
       <w>80</w>
       <h>110</h>
     </coordinates>
@@ -37,8 +37,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>250</x>
-      <y>190</y>
+      <x>310</x>
+      <y>210</y>
       <w>30</w>
       <h>650</h>
     </coordinates>
@@ -48,216 +48,52 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>800</x>
-      <y>190</y>
+      <x>860</x>
+      <y>210</y>
       <w>30</w>
-      <h>680</h>
+      <h>380</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;660.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;360.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>570</x>
-      <y>190</y>
+      <x>690</x>
+      <y>210</y>
       <w>30</w>
-      <h>690</h>
+      <h>650</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;670.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>250</x>
-      <y>250</y>
-      <w>190</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-Επιλογή τεχνικού και 
-στοιχείων της εργασίας</panel_attributes>
-    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;630.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>800</x>
-      <y>280</y>
-      <w>20</w>
-      <h>130</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>250</x>
-      <y>470</y>
-      <w>190</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-Επιλογή ημερομηνίας</panel_attributes>
-    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLFrame</id>
-    <coordinates>
-      <x>240</x>
-      <y>410</y>
-      <w>250</w>
-      <h>140</h>
-    </coordinates>
-    <panel_attributes>*loop*
-Ημερομηνία μη διαθέσιμη</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>390</x>
-      <y>170</y>
-      <w>100</w>
+      <x>420</x>
+      <y>190</y>
+      <w>160</w>
       <h>30</h>
     </coordinates>
-    <panel_attributes>_:CustomerUI_</panel_attributes>
+    <panel_attributes>_:BookReservationActivity_</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>420</x>
-      <y>190</y>
+      <x>480</x>
+      <y>210</y>
       <w>30</w>
-      <h>660</h>
+      <h>650</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;640.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;630.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>420</x>
-      <y>250</y>
-      <w>20</w>
-      <h>570</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>430</x>
-      <y>290</y>
-      <w>390</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-
-Get technician</panel_attributes>
-    <additional_attributes>370.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>430</x>
-      <y>370</y>
-      <w>390</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-Αποστολή τεχνικού</panel_attributes>
-    <additional_attributes>10.0;20.0;370.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>800</x>
-      <y>770</y>
-      <w>20</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>430</x>
-      <y>560</y>
-      <w>160</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-
-requestID</panel_attributes>
-    <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>1030</x>
-      <y>710</y>
-      <w>20</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>570</x>
-      <y>560</y>
-      <w>20</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>430</x>
-      <y>610</y>
-      <w>160</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-email</panel_attributes>
-    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>430</x>
-      <y>770</y>
-      <w>390</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-
-Σύνδεση ραντεβού</panel_attributes>
-    <additional_attributes>370.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>430</x>
-      <y>710</y>
-      <w>620</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-
-Δημιουργία και αποθήκευση ραντεβού</panel_attributes>
-    <additional_attributes>600.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>960</x>
-      <y>170</y>
+      <x>1020</x>
+      <y>190</y>
       <w>160</w>
       <h>30</h>
     </coordinates>
@@ -267,12 +103,314 @@ email</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1030</x>
-      <y>190</y>
+      <x>1090</x>
+      <y>210</y>
       <w>30</w>
       <h>650</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;630.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>480</x>
+      <y>240</y>
+      <w>20</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>230</y>
+      <w>390</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+findTechnician(technicianUsername)</panel_attributes>
+    <additional_attributes>370.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>860</x>
+      <y>240</y>
+      <w>20</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>270</y>
+      <w>390</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+technician</panel_attributes>
+    <additional_attributes>10.0;20.0;370.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>860</x>
+      <y>320</y>
+      <w>20</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>310</y>
+      <w>390</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+getSpecialties()</panel_attributes>
+    <additional_attributes>370.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>350</y>
+      <w>390</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+specialties</panel_attributes>
+    <additional_attributes>10.0;20.0;370.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>860</x>
+      <y>400</y>
+      <w>20</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>390</y>
+      <w>390</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+getJobs()</panel_attributes>
+    <additional_attributes>370.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>430</y>
+      <w>390</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+jobs</panel_attributes>
+    <additional_attributes>10.0;20.0;370.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>860</x>
+      <y>480</y>
+      <w>20</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>470</y>
+      <w>390</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+getAvailableDates()</panel_attributes>
+    <additional_attributes>370.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>510</y>
+      <w>390</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+dates</panel_attributes>
+    <additional_attributes>10.0;20.0;370.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>310</x>
+      <y>570</y>
+      <w>190</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+Types data and
+clicks on the button</panel_attributes>
+    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>480</x>
+      <y>570</y>
+      <w>20</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>690</x>
+      <y>600</y>
+      <w>20</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>590</y>
+      <w>220</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+new Appointment(...)</panel_attributes>
+    <additional_attributes>200.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>630</y>
+      <w>220</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+appointment</panel_attributes>
+    <additional_attributes>10.0;20.0;200.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>690</x>
+      <y>680</y>
+      <w>20</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>670</y>
+      <w>220</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+setCustomer(...)</panel_attributes>
+    <additional_attributes>200.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>690</x>
+      <y>750</y>
+      <w>20</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>340</x>
+      <y>740</y>
+      <w>390</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*loop*
+for each</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>740</y>
+      <w>220</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+addJob(job)</panel_attributes>
+    <additional_attributes>200.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>790</y>
+      <w>620</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+save(appointment)</panel_attributes>
+    <additional_attributes>600.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1090</x>
+      <y>790</y>
+      <w>20</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>860</x>
+      <y>560</y>
+      <w>20</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>type=termination</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>

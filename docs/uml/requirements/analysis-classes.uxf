@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>460</x>
-      <y>310</y>
+      <x>420</x>
+      <y>290</y>
       <w>140</w>
       <h>50</h>
     </coordinates>
@@ -16,32 +16,32 @@ Customer</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>620</x>
-      <y>170</y>
-      <w>140</w>
+      <x>570</x>
+      <y>80</y>
+      <w>160</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>&lt;&lt;boundary&gt;&gt;
-TechnicianUI</panel_attributes>
+TechnicianRegistration</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>460</x>
-      <y>170</y>
+      <x>420</x>
+      <y>80</y>
       <w>140</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>&lt;&lt;boundary&gt;&gt;
-CustomerUI</panel_attributes>
+CustomerRegistration</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>620</x>
-      <y>310</y>
+      <x>580</x>
+      <y>290</y>
       <w>140</w>
       <h>50</h>
     </coordinates>
@@ -52,8 +52,8 @@ Technician</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>780</x>
-      <y>310</y>
+      <x>740</x>
+      <y>290</y>
       <w>140</w>
       <h>50</h>
     </coordinates>
@@ -64,13 +64,121 @@ Appointment</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>770</x>
-      <y>240</y>
-      <w>160</w>
+      <x>580</x>
+      <y>220</y>
+      <w>140</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>&lt;&lt;controller&gt;&gt;
-AppointmentController</panel_attributes>
+TechnicianDAO</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>900</x>
+      <y>290</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;entity&gt;&gt;
+Payment</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>740</x>
+      <y>220</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;controller&gt;&gt;
+AppointmentDAO</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>220</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;controller&gt;&gt;
+CustomerDAO</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>740</x>
+      <y>80</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;boundary&gt;&gt;
+TechnicianList</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>890</x>
+      <y>80</y>
+      <w>160</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;boundary&gt;&gt;
+BookReservationActivity</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>150</y>
+      <w>200</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;boundary&gt;&gt;
+AppointmentApprovalFragment</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>150</y>
+      <w>220</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;boundary&gt;&gt;
+AppointmentCompletionFragment</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>870</x>
+      <y>150</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;boundary&gt;&gt;
+PaymentFragment</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1020</x>
+      <y>150</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;boundary&gt;&gt;
+EvaluationActivity</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

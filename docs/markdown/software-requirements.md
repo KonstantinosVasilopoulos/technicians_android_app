@@ -143,13 +143,37 @@
 
 ### Συμπεριφορές
 
-#### ΠΧ4 - Επιλογή Ραντεβού
+#### ΠΧ 1 - Εγγραφή Πελάτη
+
+![Διάγραμμα ακολουθίας](uml/requirements/uc1-sequence-diagram.png)
+
+#### ΠΧ 2 - Εγγραφή Τεχικού
+
+![Διάγραμμα ακολουθίας](uml/requirements/uc2-sequence-diagram.png)
+
+#### ΠΧ 3 - Προβολή Τεχνικών
+
+![Διάγραμμα ακολουθίας](uml/requirements/uc3-sequence-diagram.png)
+
+#### ΠΧ 4 - Επιλογή Ραντεβού
 
 ![Διάγραμμα ακολουθίας - Επιλογή Ραντεβού](uml/requirements/uc4-sequence-diagram.png)
 
-#### ΠΧ5 - Επιβεβαίωση Ραντεβού
+#### ΠΧ 5 - Επιβεβαίωση Ραντεβού
 
 ![Διάγραμμα ακολουθίας - Επιβεβαίωση Ραντεβού](uml/requirements/uc5-sequence-diagram.png)
+
+#### ΠΧ 6 - Ολοκλήρωση Ραντεβού
+
+![Διάγραμμα ακολουθίας](uml/requirements/uc6-sequence-diagram.png)
+
+#### ΠΧ 7 - Εξόφληση Τεχνικού
+
+![Διάγραμμα ακολουθίας](uml/requirements/uc7-sequence-diagram.png)
+
+#### ΠΧ 8 - Αξιολόγηση Τεχνικού
+
+![Διάγραμμα ακολουθίας](uml/requirements/uc8-sequence-diagram.png)
 
 ## Άλλα μοντέλα
 ------------

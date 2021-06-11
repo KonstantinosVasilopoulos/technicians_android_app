@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>190</x>
+      <y>180</y>
+      <w>460</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>*AppointmentDAO*
+--
+_- instance: AppointmentDAO_
+- appointments: List&lt;Appointment&gt;
+--
+_+ getInstance(): AppointmentDAO_
++ find(id: long): Appointment
++ getAppointmentsForTechnician(username: String): List&lt;Appointment&gt;
++ getAppointmentsForCustomer(username: String): List&lt;Appointment&gt;
++ save(appointment: Appointment): void
++ delete(appointment: Appointment): void
+  </panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
