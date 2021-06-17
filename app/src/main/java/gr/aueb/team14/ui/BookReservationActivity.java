@@ -128,6 +128,7 @@ public class BookReservationActivity extends AppCompatActivity {
                 for (Job job : chosenJobs)
                     price += job.getPrice();
                 Appointment appointment = new Appointment(chosenDate.getFrom(), chosenDate.getTo(), price);
+                chosenDate.setBooked(true);
                 appointment.setCustomer((Customer) LoggedInUser.getInstance().getUser());
 
                 // Connect the new appointment to the chosen jobs

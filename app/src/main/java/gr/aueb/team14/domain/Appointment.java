@@ -119,6 +119,6 @@ public class Appointment {
     public String toString() {
         @SuppressLint("SimpleDateFormat")
         DateFormat dateFormat = new SimpleDateFormat("dd MMMM yyyy");
-        return dateFormat.format(from) + " - " + dateFormat.format(to) + " " + customer.getAddress();
+        return "Ραντεβού στις " + dateFormat.format(from) + " έως " + dateFormat.format(to);
     }
 }
