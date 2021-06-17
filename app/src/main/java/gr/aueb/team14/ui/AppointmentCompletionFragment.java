@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 import gr.aueb.team14.R;
 import gr.aueb.team14.dao.AppointmentDAO;
 import gr.aueb.team14.domain.Appointment;
+import gr.aueb.team14.domain.AvailableDate;
 
 public class AppointmentCompletionFragment extends Fragment {
     Appointment appointment;
@@ -67,6 +69,12 @@ public class AppointmentCompletionFragment extends Fragment {
             public void onClick(View v) {
                 // Complete the appointment
                 appointment.setCompleted(true);
+                for (AvailableDate date : appointment.getJobs().get(0).getTechnician().getAvailableDates()) {
+                    if (date.getFrom() == appointment.getFrom() && date.getTo() == date.getTo()) {
+                        date.setBooked(false);
+                        break;
+                    }
+                }
 
                 // Redirect to the activity containing all reservation
                 Intent intent = new Intent(v.getContext(), AppointmentsActivity.class);

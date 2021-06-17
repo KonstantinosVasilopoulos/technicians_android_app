@@ -18,14 +18,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Create some technicians and customers for debugging
-        var technician = Technician("Antonis Kati", "testing321")
+        var technician = Technician("Antonis Vassilopoulos", "testing321")
         technician.addSpecialty(Specialty.Builder);
         technician.addAvailableDate(AvailableDate(Date(2021, 10, 13), Date(2021, 10, 13)))
         technician.addAddress("Marathonos 12")
         technician.addAddress(("Apollonos 9"))
         technician.addJob(Job("Wall repair", 50.0))
         TechnicianDAO.getInstance().save(technician)
-        technician = Technician("Petros Surname", "code4321")
+        technician = Technician("Petros Syntakas", "code4321")
         technician.addSpecialty(Specialty.Locksmith)
         technician.addSpecialty(Specialty.Electrician)
         technician.addAvailableDate(AvailableDate(Date(2021, 1, 10), Date(2021, 10, 20)))
@@ -43,9 +43,10 @@ class MainActivity : AppCompatActivity() {
         appointment.addJob(technician.jobs[0])
         appointment.addJob(technician.jobs[2])
         appointment.isConfirmed = true
+        technician.availableDates[0].isBooked = true
         customer.addAppointment(appointment)
         AppointmentDAO.getInstance().save(appointment)
-        val appointment2 = Appointment(technician.availableDates[0].from, technician.availableDates[0].to, technician.jobs[0].price)
+        val appointment2 = Appointment(technician.availableDates[1].from, technician.availableDates[0].to, technician.jobs[0].price)
         appointment2.addJob(technician.jobs[0])
         appointment2.isConfirmed = true
         appointment2.isCompleted = true
